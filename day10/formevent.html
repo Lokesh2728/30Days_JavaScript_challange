@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myForm">
+        <input type="text" name="name" placeholder="Enter your name">
+        <button type="submit">Submit</button>
+      </form>
+      
+</body>
+<script>
+  
+  // Get the form element
+  const form = document.getElementById('myForm');
+  
+  // Add submit event listener
+  form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission behavior
+    
+    // Your custom submit logic here
+    const formData = new FormData(form);
+    const name = formData.get('name');
+    
+    console.log('Form submitted!');
+    console.log('Name:', name);
+    
+    
+  });
+
+
+</script>
+</html>

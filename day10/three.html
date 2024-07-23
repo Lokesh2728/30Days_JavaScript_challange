@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1 class="heading">Task to change content on click</h1>
+        <button class="task">submit</button>
+        <br><br><ul>
+        <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="">
+        </li>
+        </ul><br><br>
+        <input type="text" id='text'>
+        <p class="para">hi</p>
+        
+    </div>
+</body>
+<script>
+    const change=document.querySelector('.task')
+    // change.addEventListener('click',()=>{
+    //     const heading=document.querySelector('.heading')
+    //     heading.textContent='Task 1 completed'
+    //     })
+        
+    //     change.addEventListener('mouseover',()=>{
+    //         document.body.style.backgroundColor='#C0E845'
+    //     })
+    //     change.addEventListener('mouseout',()=>{
+    //         document.body.style.backgroundColor='white'
+    //     })
+        const text=document.querySelector('input')
+        const hi=document.querySelector('.para')
+        text.addEventListener('keyup',(e)=>{
+            console.log(e.key);
+            hi.textContent=text.value;
+            
+        })
+        
+
+</script>
+</html>
