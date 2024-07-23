@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom mainupalation</title>
+</head>
+<body style="  background-color: #212121 ;color: #fff">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+    const div=document.createElement('div');
+    div.className="main";
+    div.id="myId";
+    div.setAttribute('title',"genratedtitle");
+    div.style.backgroundColor="green";
+    div.innerHTML="chai aur code";
+    document.body.appendChild(div);
+    div.style.borderRadius='20px';
+    div.style.padding='12px';
+    div.style.textAlign='center';
+    
+
+    // function for editing new element
+    function addlanguage(langname){
+        const li=document.createElement('li')
+        li.appendChild(document.createTextNode(langname))
+        document.querySelector('.language').appendChild(li)
+    }
+    addlanguage('c++')
+    addlanguage('react')
+    addlanguage('python')
+    addlanguage('ruby')
+    
+    // removing last child from node
+    const lastlang=document.querySelector('li:last-child')
+    lastlang.remove()
+    
+
+
+</script>
+</html>

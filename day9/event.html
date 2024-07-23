@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    html {
+    margin: 0;
+  }
+  
+  span {
+    display: block;
+  }
+  .canvas {
+    margin: 100px auto 100px;
+    width: 80%;
+    text-align: center;
+  }
+  
+  .button {
+    width: 100px;
+    height: 100px;
+    border: solid black 2px;
+    display: inline-block;
+  }
+</style>
+<body>
+    <h1>Color Scheme Switcher</h1>
+    <span class="button" id="grey"></span>
+    <h2>
+      Try clicking on one of the colors above
+    </h2>
+  </div>
+    
+</body>
+<script>
+    const grey = document.getElementById('grey');
+    grey.addEventListener('click', function() {
+        grey.innerHTML='hello'
+        })
+        grey.addEventListener('mouseover',function(){
+            grey.style.borderColor='red'
+        })
+</script>
+</html>
